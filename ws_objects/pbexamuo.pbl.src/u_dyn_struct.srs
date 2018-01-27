@@ -1,0 +1,10 @@
+﻿$PBExportHeader$u_dyn_struct.srs
+$PBExportComments$動的な構造体
+global type u_dyn_struct from structure
+    window win
+    string clicked
+    string label
+    int size
+    int code
+end type
+

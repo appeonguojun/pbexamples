@@ -1,0 +1,12 @@
+﻿$PBExportHeader$f_get_profile.srf
+$PBExportComments$INI ファイルまたはレジストリからデータを読み込む関数です。
+global type f_get_profile from function_object
+end type
+
+forward prototypes
+global function integer f_get_profile (string as_section, string as_name, ref string as_value)
+end prototypes
+
+global function integer f_get_profile (string as_section, string as_name, ref string as_value);Return RegistryGet(sREGKEY + "\Code Examples\" + as_Section, as_Name, as_Value)
+end function
+

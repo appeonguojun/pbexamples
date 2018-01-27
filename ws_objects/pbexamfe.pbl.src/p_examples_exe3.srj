@@ -1,0 +1,49 @@
+﻿$PBExportHeader$p_examples_exe3.srj
+$PBExportComments$Generated Application Executable Project
+EXE:examples.exe,,0,1,1
+CMP:0,0,0,2,0,0,1
+COM:Appeon
+DES:Appeon Product File
+CPY:
+PRD:PowerBuilder Enterprise Series
+PVS:1.0.0.1
+PVN:1,0,0,1
+FVS:1.0.0.1
+FVN:1,0,0,1
+MAN:0,asInvoker,0
+PBD:pbexamd1.pbl,,0
+PBD:pbexamd2.pbl,,0
+PBD:pbexamfe.pbl,,0
+PBD:pbexamfn.pbl,,0
+PBD:pbexammn.pbl,,0
+PBD:pbexamsa.pbl,,0
+PBD:pbexamor.pbl,,0
+PBD:pbexamsy.pbl,,0
+PBD:pbexamuo.pbl,,0
+PBD:pbexamw1.pbl,,0
+PBD:pbexamw2.pbl,,0
+PBD:pbexamw3.pbl,,0
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,f_get_profile,f
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_system_error,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_dw_print_options,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_about,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,m_report,m
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,m_main_rmb,m
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,f_create_external_func_uo,f
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_set_sqlca,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,f_open_help,f
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,d_system_error,d
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_splash,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_zoom,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,u_report_structure,u
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,d_search_events,d
+OBJ:C:\Users\Public\Documents\Appeon\PowerBuilder 17.0\Code Examples\Example App\pbexamfe.pbl,examples,a
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,m_main,m
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_script,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_example_report_sheet,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,d_example_report_main,d
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,f_set_profile,f
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,u_external_function,u
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_center,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_example_report_frame,w
+OBJ:c:\users\public\documents\appeon\powerbuilder 17.0\code examples\example app\pbexamfe.pbl,w_main,w

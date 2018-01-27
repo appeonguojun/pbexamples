@@ -1,0 +1,67 @@
+﻿$PBExportHeader$f_mail_error_to_string.srf
+$PBExportComments$メールからの戻り値(カタログデータ型)を文字列に変換します。
+global type f_mail_error_to_string from function_object
+end type
+
+forward prototypes
+global function string f_mail_error_to_string (mailreturncode a_mailreturncode, string a_message, boolean a_display)
+end prototypes
+
+global function string f_mail_error_to_string (mailreturncode a_mailreturncode, string a_message, boolean a_display);// Function  f_mail_error_to_string ( a_MailReturnCode, a_Display)
+// where:	a_MailReturnCode	MailReturnCode value
+//			a_Message			Error message to prepend to return string
+//			a_Display			Boolean (TRUE=display error messagebox)
+
+string	s
+
+choose case a_MailReturnCode
+	case mailReturnAccessDenied!
+		s = "アクセスが拒否されました"
+	case mailReturnAttachmentNotFound!
+		s = "添付ファイルが存在しません"
+	case mailReturnAttachmentOpenFailure!
+		s = "添付ファイルのオープンに失敗しました"
+	case mailReturnAttachmentWriteFailure!
+		s = "添付ファイルの書き込みに失敗しました"
+	case mailReturnDiskFull!
+		s = "ディスク要領が不足しています"
+	case mailReturnFailure!
+		s = "失敗しました"
+	case mailReturnInsufficientMemory!
+		s = "メモリが不足しています"
+	case mailReturnInvalidMessage!
+		s = "不正なメッセージです"
+	case mailReturnLoginFailure!
+		s = "ログインに失敗しました"
+	case mailReturnMessageInUse!
+		s = "メッセージが使用されています"
+	case mailReturnNoMessages!
+		s = "メッセージが存在しません"
+	case mailReturnSuccess!
+		s = "成功しました"
+	case mailReturnTextTooLarge!
+		s = "テキストが長すぎます"
+	case mailReturnTooManyFiles!
+		s = "ファイルが多すぎます"
+	case mailReturnTooManyRecipients!
+		s = "宛先が多すぎます"
+	case mailReturnTooManySessions!
+		s = "セッションが多すぎます"
+	case mailReturnUnknownRecipient!
+		s = "不明な宛先です"
+	case mailReturnUserAbort!
+		s = "ユーザにより中断されました"
+		
+	case else
+		s = "不明なエラー"
+end choose
+
+if a_Display then MessageBox ( 'Mail Return Code', a_Message + ' ' + s, Exclamation!)
+
+return s
+
+
+
+
+end function
+

@@ -1,0 +1,23 @@
+﻿$PBExportHeader$d_menuitem_attributes.srd
+$PBExportComments$フリーフォーム提示様式データウィンドウ。メニューのプロパティを変更するために使用されます。
+release 7;
+datawindow(units=0 timer_interval=0 color=78682240 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=4 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=340 color="536870912" )
+table(column=(type=char(1) updatewhereclause=yes name=visible dbname="visible" values="表示可能	Y/表示可能	N" )
+ column=(type=char(1) updatewhereclause=yes name=enabled dbname="enabled" values="使用可能	Y/使用可能	N" )
+ column=(type=char(1) updatewhereclause=yes name=checked dbname="checked" values="チェック済み	Y/チェック済み	N" )
+ column=(type=char(75) updatewhereclause=yes name=microhelp dbname="microhelp" )
+ )
+column(band=detail id=3 alignment="0" tabsequence=30 border="0" color="33554592" x="9" y="156" height="64" width="448" format="[general]"  name=checked checkbox.text="チェック済み" checkbox.on="Y" checkbox.off="N" checkbox.scale=no checkbox.threed=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=detail alignment="1" text="マイクロヘルプ：" border="0" color="33554592" x="73" y="264" height="52" width="462"  name=microhelp_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=1 alignment="0" tabsequence=10 border="0" color="33554592" x="9" y="4" height="64" width="311" format="[general]"  name=visible checkbox.text="表示可能" checkbox.on="Y" checkbox.off="N" checkbox.scale=no checkbox.threed=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=2 alignment="0" tabsequence=20 border="0" color="33554592" x="9" y="80" height="64" width="329" format="[general]"  name=enabled checkbox.text="使用可能" checkbox.on="Y" checkbox.off="N" checkbox.scale=no checkbox.threed=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=4 alignment="0" tabsequence=40 border="5" color="33554592" x="562" y="260" height="64" width="1202" format="[general]"  name=microhelp edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

@@ -1,0 +1,57 @@
+﻿$PBExportHeader$d_example_report_detail.srd
+$PBExportComments$サンプル レポート
+release 8;
+datawindow(units=0 timer_interval=60000 color=16777215 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="-1" )
+footer(height=0 color="-1" )
+detail(height=263 color="536870912"  height.autosize=yes)
+table(column=(type=char(60) updatewhereclause=yes name=refer dbname="exam_xref_list.refer" )
+ column=(type=char(10) updatewhereclause=yes name=app dbname="exam_xref_list.application" )
+ column=(type=char(60) updatewhereclause=yes name=object dbname="exam_xref_list.object" )
+ column=(type=char(32767) updatewhereclause=yes name=exam_xref_info_referenced_in dbname="exam_xref_info.referenced_in" )
+ retrieve="SELECT DISTINCT
+ exam_xref_list.refer,
+ exam_xref_list.application,
+ exam_xref_list.object,
+ exam_xref_info_b.referenced_in 
+
+FROM exam_xref_info exam_xref_info_a,
+ exam_xref_info exam_xref_info_b,
+ exam_xref_list 
+WHERE
+( exam_xref_info_b.object_ref =* exam_xref_list.refer) 
+AND ( exam_xref_list.application = exam_xref_info_a.application ) 
+AND ( exam_xref_list.refer = exam_xref_info_a.referenced_in ) 
+AND ( exam_xref_list.application = :app) 
+AND (exam_xref_list.object = :object) 
+AND (exam_xref_info_b.event like '%inherit%')
+
+UNION
+
+SELECT DISTINCT 
+ exam_xref_list.refer,
+ exam_xref_list.application,
+ exam_xref_list.object,
+ NULL
+FROM 
+ exam_xref_info exam_xref_info,
+ exam_xref_list
+WHERE ( exam_xref_list.application = exam_xref_info.application ) 
+AND ( exam_xref_list.refer = exam_xref_info.referenced_in ) 
+AND ( exam_xref_list.application = :app) 
+AND (exam_xref_list.object = :object) 
+AND (exam_xref_list.refer
+ NOT IN (
+   SELECT object_ref
+   FROM exam_xref_info 
+   WHERE (event like '%inherit%')))
+" arguments=(("app", string),("object", string))  sort="refer A " )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="0" x="404" y="18" height="64" width="840" format="[general]" html.valueishtml="0"  name=refer visible="1" height.autosize=yes edit.limit=128 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+text(band=detail alignment="1" text="オブジェクト:" border="0" color="0" x="4" y="15" height="68" width="372" html.valueishtml="0"  name=t_1 visible="1"  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127"  height.autosize=yes)
+report(band=detail dataobject="d_example_detail_functions" x="96" y="207" height="46" width="3500" border="0"  height.autosize=yes criteria="" nest_arguments=(("app"),("refer")) trail_footer = yes  name=n_functions visible="1"  slideup=allabove )
+compute(band=detail alignment="0" expression="' is inherited from ' +  exam_xref_info_referenced_in"border="0" color="0" x="1264" y="15" height="64" width="1732" format="[GENERAL]" html.valueishtml="0"  name=ancestor visible="1"  slideleft=yes  font.face="ＭＳ ゴシック" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="128" background.mode="2" background.color="16777215" )
+report(band=detail dataobject="d_example_detail_events" x="96" y="167" height="39" width="3500" border="0"  height.autosize=yes criteria="" nest_arguments=(("app"),("refer")) trail_footer = yes  name=n_events visible="1"  slideup=allabove )
+report(band=detail dataobject="d_example_detail_dddw" x="96" y="79" height="43" width="3500" border="0"  height.autosize=yes criteria="" nest_arguments=(("app"),("refer")) trail_footer = yes  name=n_dddw visible="1"  slideup=allabove )
+report(band=detail dataobject="d_example_detail_declared" x="96" y="125" height="43" width="3500" border="0"  height.autosize=yes criteria="" nest_arguments=(("app"),("refer")) trail_footer = yes  name=n_declared visible="1"  slideup=allabove )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" netscapelayers="0" )

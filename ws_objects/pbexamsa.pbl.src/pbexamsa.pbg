@@ -1,0 +1,19 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "pbexamsa.pbl" "";
+@end;
+@begin Objects 
+ "d_columns.srd" "pbexamsa.pbl";
+ "d_crosstab.srd" "pbexamsa.pbl";
+ "d_cust_products.srd" "pbexamsa.pbl";
+ "d_example_report_detail.srd" "pbexamsa.pbl";
+ "d_mode_median.srd" "pbexamsa.pbl";
+ "d_order_data_for_graph.srd" "pbexamsa.pbl";
+ "d_product_info.srd" "pbexamsa.pbl";
+ "d_sp_contacts.srd" "pbexamsa.pbl";
+ "d_sp_dddw_customers.srd" "pbexamsa.pbl";
+ "d_sp_order_items.srd" "pbexamsa.pbl";
+ "d_sp_orders.srd" "pbexamsa.pbl";
+ "d_tables.srd" "pbexamsa.pbl";
+ "p_create_full_sales_orders_sp.srp" "pbexamsa.pbl";
+@end;

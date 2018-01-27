@@ -1,0 +1,403 @@
+﻿$PBExportHeader$m_menu_functions_main.srm
+$PBExportComments$w_menu_functions のメイン メニュー(メニュー テクニック サンプル プログラム)
+forward
+global type m_menu_functions_main from m_test
+end type
+end forward
+
+global type m_menu_functions_main from m_test
+end type
+global m_menu_functions_main m_menu_functions_main
+
+type variables
+
+end variables
+
+on m_menu_functions_main.create
+m_menu_functions_main=this
+call super::create
+end on
+
+on m_menu_functions_main.destroy
+call super::destroy
+end on
+
+type m_file from m_test`m_file within m_menu_functions_main
+end type
+
+on m_file.create
+call super::create
+end on
+
+on m_file.destroy
+call super::destroy
+end on
+
+type m_close from m_test`m_close within m_file
+end type
+
+on m_close.create
+call super::create
+this.toolbaritemname = ""
+this.toolbaritemtext = ""
+this.toolbaritemorder = 0
+end on
+
+on m_close.destroy
+call super::destroy
+end on
+
+type m_-2 from m_test`m_-2 within m_file
+end type
+
+on m_-2.create
+call super::create
+end on
+
+on m_-2.destroy
+call super::destroy
+end on
+
+type m_exit from m_test`m_exit within m_file
+end type
+
+on m_exit::clicked;call m_test`m_exit::clicked;parentwindow.PostEvent ('ue_exit')
+end on
+
+on m_exit.create
+call super::create
+this.toolbaritemname = "exit1.bmp"
+this.toolbaritemdownname = "exit2.bmp"
+end on
+
+on m_exit.destroy
+call super::destroy
+end on
+
+type m_settings from m_test`m_settings within m_menu_functions_main
+end type
+
+on m_settings.create
+call super::create
+end on
+
+on m_settings.destroy
+call super::destroy
+end on
+
+type m_windowbackgroundcolor from m_test`m_windowbackgroundcolor within m_settings
+end type
+
+on m_windowbackgroundcolor.create
+call super::create
+end on
+
+on m_windowbackgroundcolor.destroy
+call super::destroy
+end on
+
+type m_black from m_test`m_black within m_windowbackgroundcolor
+end type
+
+on m_black.create
+call super::create
+end on
+
+on m_black.destroy
+call super::destroy
+end on
+
+type m_white from m_test`m_white within m_windowbackgroundcolor
+end type
+
+on m_white.create
+call super::create
+end on
+
+on m_white.destroy
+call super::destroy
+end on
+
+type m_gray from m_test`m_gray within m_windowbackgroundcolor
+end type
+
+on m_gray.create
+call super::create
+end on
+
+on m_gray.destroy
+call super::destroy
+end on
+
+type m_red from m_test`m_red within m_windowbackgroundcolor
+end type
+
+on m_red.create
+call super::create
+end on
+
+on m_red.destroy
+call super::destroy
+end on
+
+type m_green from m_test`m_green within m_windowbackgroundcolor
+end type
+
+on m_green.create
+call super::create
+end on
+
+on m_green.destroy
+call super::destroy
+end on
+
+type m_blue from m_test`m_blue within m_windowbackgroundcolor
+end type
+
+on m_blue.create
+call super::create
+end on
+
+on m_blue.destroy
+call super::destroy
+end on
+
+type m_magenta from m_test`m_magenta within m_windowbackgroundcolor
+end type
+
+on m_magenta.create
+call super::create
+end on
+
+on m_magenta.destroy
+call super::destroy
+end on
+
+type m_cyan from m_test`m_cyan within m_windowbackgroundcolor
+end type
+
+on m_cyan.create
+call super::create
+end on
+
+on m_cyan.destroy
+call super::destroy
+end on
+
+type m_yellow from m_test`m_yellow within m_windowbackgroundcolor
+end type
+
+on m_yellow.create
+call super::create
+end on
+
+on m_yellow.destroy
+call super::destroy
+end on
+
+type m_brown from m_test`m_brown within m_windowbackgroundcolor
+end type
+
+on m_brown.create
+call super::create
+end on
+
+on m_brown.destroy
+call super::destroy
+end on
+
+type m_buttonface from m_test`m_buttonface within m_windowbackgroundcolor
+end type
+
+on m_buttonface.create
+call super::create
+this.text = "3D オブジェクト(&F)"
+end on
+
+on m_buttonface.destroy
+call super::destroy
+end on
+
+type m_window from m_test`m_window within m_menu_functions_main
+end type
+
+on m_window.create
+call super::create
+end on
+
+on m_window.destroy
+call super::destroy
+end on
+
+type m_tile from m_test`m_tile within m_window
+end type
+
+on m_tile::clicked;call m_test`m_tile::clicked;parentwindow.PostEvent ('ue_tile')
+
+end on
+
+on m_tile.create
+call super::create
+this.text = "左右に並べて表示(&T)"
+this.toolbaritemname = "tile1.bmp"
+this.toolbaritemdownname = "tile2.bmp"
+this.toolbaritemtext = "左右に並べて表示"
+this.toolbaritemorder = 1
+end on
+
+on m_tile.destroy
+call super::destroy
+end on
+
+type m_horizontal from m_test`m_horizontal within m_window
+end type
+
+on m_horizontal::clicked;call m_test`m_horizontal::clicked;parentwindow.PostEvent ('ue_htile')
+end on
+
+on m_horizontal.create
+call super::create
+end on
+
+on m_horizontal.destroy
+call super::destroy
+end on
+
+type m_layer from m_test`m_layer within m_window
+end type
+
+on m_layer::clicked;call m_test`m_layer::clicked;parentwindow.PostEvent ('ue_layer')
+
+end on
+
+on m_layer.create
+call super::create
+end on
+
+on m_layer.destroy
+call super::destroy
+end on
+
+type m_cascade from m_test`m_cascade within m_window
+end type
+
+on m_cascade::clicked;call m_test`m_cascade::clicked;parentwindow.PostEvent ('ue_cascade')
+
+end on
+
+on m_cascade.create
+call super::create
+this.toolbaritemname = "cascade1.bmp"
+this.toolbaritemdownname = "cascade2.bmp"
+this.toolbaritemtext = "重ねて表示"
+this.toolbaritemorder = 2
+end on
+
+on m_cascade.destroy
+call super::destroy
+end on
+
+type m_-3 from m_test`m_-3 within m_window
+end type
+
+on m_-3.create
+call super::create
+end on
+
+on m_-3.destroy
+call super::destroy
+end on
+
+type m_arrangeicons from m_test`m_arrangeicons within m_window
+end type
+
+on m_arrangeicons::clicked;call m_test`m_arrangeicons::clicked;parentwindow.PostEvent ('ue_arrange')
+
+end on
+
+on m_arrangeicons.create
+call super::create
+end on
+
+on m_arrangeicons.destroy
+call super::destroy
+end on
+
+type m_-4 from m_test`m_-4 within m_window
+end type
+
+on m_-4.create
+call super::create
+end on
+
+on m_-4.destroy
+call super::destroy
+end on
+
+type m_toolbars from m_test`m_toolbars within m_window
+end type
+
+on m_toolbars.create
+call super::create
+end on
+
+on m_toolbars.destroy
+call super::destroy
+end on
+
+type m_help from m_test`m_help within m_menu_functions_main
+end type
+
+on m_help.create
+call super::create
+end on
+
+on m_help.destroy
+call super::destroy
+end on
+
+type m_contents from m_test`m_contents within m_help
+end type
+
+on m_contents::clicked;call m_test`m_contents::clicked;f_open_help ('w_frame_menu_functions')
+end on
+
+on m_contents.create
+call super::create
+this.microhelp = "このサンプル プログラムのヘルプを表示します。"
+this.toolbaritemname = ""
+this.toolbaritemtext = ""
+this.toolbaritemorder = 0
+this.toolbaritemspace = 0
+end on
+
+on m_contents.destroy
+call super::destroy
+end on
+
+type m_- from m_test`m_- within m_help
+end type
+
+on m_-.create
+call super::create
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_aboutexample from m_test`m_aboutexample within m_help
+end type
+
+on m_aboutexample::clicked;call m_test`m_aboutexample::clicked;OpenWithParm (w_about_with_parm, 'MenuItem Attributes@')
+end on
+
+on m_aboutexample.create
+call super::create
+this.text = "バージョン情報(&A)..."
+end on
+
+on m_aboutexample.destroy
+call super::destroy
+end on
+

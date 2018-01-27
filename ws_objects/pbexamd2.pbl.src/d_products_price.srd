@@ -1,0 +1,24 @@
+﻿$PBExportHeader$d_products_price.srd
+$PBExportComments$グリッド提示様式: 商品ID, 商品名, 単価
+release 7;
+datawindow(units=0 timer_interval=0 color=1083244543 processing=1 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 grid.columnmove=no selected.mouse=no )
+header(height=64 color="536870912" )
+summary(height=4 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=72 color="536870912" )
+table(column=(type=number update=yes updatewhereclause=yes key=yes name=id dbname="product.id" )
+ column=(type=char(15) update=yes updatewhereclause=yes name=name dbname="product.name" )
+ column=(type=number update=yes updatewhereclause=yes name=unit_price dbname="product.unit_price" )
+ retrieve="PBSELECT(TABLE(NAME=~"product~" ) COLUMN(NAME=~"product.id~") COLUMN(NAME=~"product.name~") COLUMN(NAME=~"product.unit_price~")) ORDER(NAME=~"product.id~" ASC=yes ) " update="product" updatewhere=1 updatekeyinplace=no )
+text(band=header alignment="2" text="商品名" border="0" color="33554592" x="306" y="8" height="52" width="494"  name=name_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+text(band=header alignment="2" text="単価" border="0" color="33554592" x="809" y="8" height="52" width="270"  name=unit_price_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+text(band=header alignment="2" text="商品ID" border="0" color="33554592" x="9" y="8" height="52" width="288"  name=id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=1 alignment="1" tabsequence=32766 border="0" color="33554592" x="9" y="4" height="64" width="288" format="[general]"  name=id  tag="それぞれの商品は一意の番号を持っています。 受注テーブルとリンクしています。" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="33554592" x="306" y="4" height="64" width="494" format="[general]"  name=name  tag="商品の名前" edit.limit=15 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=3 alignment="1" tabsequence=32766 border="0" color="33554592" x="814" y="4" height="64" width="265" format="[currency]"  name=unit_price  tag="商品の値段を入力します。" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

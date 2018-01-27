@@ -1,0 +1,385 @@
+﻿$PBExportHeader$m_dynsql_format1.srm
+$PBExportComments$動的 SQL のメニュー: 書式 1 サンプル
+forward
+global type m_dynsql_format1 from m_dynsql_frame
+end type
+end forward
+
+global type m_dynsql_format1 from m_dynsql_frame
+end type
+global m_dynsql_format1 m_dynsql_format1
+
+on m_dynsql_format1.create
+m_dynsql_format1=this
+call super::create
+end on
+
+on m_dynsql_format1.destroy
+call super::destroy
+end on
+
+type m_file from m_dynsql_frame`m_file within m_dynsql_format1
+end type
+
+on m_file.create
+call super::create
+end on
+
+on m_file.destroy
+call super::destroy
+end on
+
+type m_openformat1example from m_dynsql_frame`m_openformat1example within m_file
+end type
+
+on m_openformat1example.create
+call super::create
+end on
+
+on m_openformat1example.destroy
+call super::destroy
+end on
+
+type m_openformat2example from m_dynsql_frame`m_openformat2example within m_file
+end type
+
+on m_openformat2example.create
+call super::create
+end on
+
+on m_openformat2example.destroy
+call super::destroy
+end on
+
+type m_openformat3example from m_dynsql_frame`m_openformat3example within m_file
+end type
+
+on m_openformat3example.create
+call super::create
+end on
+
+on m_openformat3example.destroy
+call super::destroy
+end on
+
+type m_openformat4example from m_dynsql_frame`m_openformat4example within m_file
+end type
+
+on m_openformat4example.create
+call super::create
+end on
+
+on m_openformat4example.destroy
+call super::destroy
+end on
+
+type m_close from m_dynsql_frame`m_close within m_file
+end type
+
+on m_close.create
+call super::create
+this.visible = true
+this.enabled = true
+this.toolbaritemname = "Custom039!"
+this.toolbaritemtext = "閉じる"
+end on
+
+on m_close.destroy
+call super::destroy
+end on
+
+type m_- from m_dynsql_frame`m_- within m_file
+end type
+
+on m_-.create
+call super::create
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_exit from m_dynsql_frame`m_exit within m_file
+end type
+
+on m_exit::clicked;//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Exit from the example
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+window	lw_frame, &
+		lw_sheet
+
+
+lw_frame = parentwindow.ParentWindow()
+if IsValid (lw_frame) then
+	Close (lw_frame)
+end if
+
+end on
+
+on m_exit.create
+call super::create
+this.toolbaritemname = "Exit!"
+this.toolbaritemtext = "終了"
+this.toolbaritemorder = 45
+end on
+
+on m_exit.destroy
+call super::destroy
+end on
+
+type m_dynamicsql from m_dynsql_frame`m_dynamicsql within m_dynsql_format1
+end type
+
+on m_dynamicsql.create
+call super::create
+this.visible = true
+this.enabled = true
+end on
+
+on m_dynamicsql.destroy
+call super::destroy
+end on
+
+type m_createtablelocations from m_dynsql_frame`m_createtablelocations within m_dynamicsql
+end type
+
+on m_createtablelocations::clicked;call m_dynsql_frame`m_createtablelocations::clicked;window	lw_frame, &
+		lw_sheet
+
+
+lw_frame = parentwindow.ParentWindow()
+if IsValid (lw_frame) then
+	lw_sheet = lw_frame.GetActiveSheet()
+	if IsValid (lw_sheet) then
+		lw_sheet.TriggerEvent ("ue_create")
+	end if
+end if
+end on
+
+on m_createtablelocations.create
+call super::create
+this.toolbaritemname = "CreateTable!"
+this.toolbaritemtext = "テーブル作成"
+this.toolbaritemorder = 6
+this.toolbaritemspace = 2
+end on
+
+on m_createtablelocations.destroy
+call super::destroy
+end on
+
+type m_altertablelocations from m_dynsql_frame`m_altertablelocations within m_dynamicsql
+end type
+
+event m_altertablelocations::clicked;call super::clicked;window	lw_frame, &
+		lw_sheet
+
+
+lw_frame = parentwindow.ParentWindow()
+if IsValid (lw_frame) then
+	lw_sheet = lw_frame.GetActiveSheet()
+	if IsValid (lw_sheet) then
+		lw_sheet.TriggerEvent ("ue_alter")
+	end if
+end if
+
+end event
+
+on m_altertablelocations.create
+call super::create
+this.toolbaritemname = "DeclareProcedure!"
+this.toolbaritemtext = "テーブル変更"
+this.toolbaritemorder = 7
+end on
+
+on m_altertablelocations.destroy
+call super::destroy
+end on
+
+type m_droptable from m_dynsql_frame`m_droptable within m_dynamicsql
+end type
+
+on m_droptable::clicked;call m_dynsql_frame`m_droptable::clicked;window	lw_frame, &
+		lw_sheet
+
+
+lw_frame = parentwindow.ParentWindow()
+if IsValid (lw_frame) then
+	lw_sheet = lw_frame.GetActiveSheet()
+	if IsValid (lw_sheet) then
+		lw_sheet.TriggerEvent ("ue_drop")
+	end if
+end if
+end on
+
+on m_droptable.create
+call super::create
+this.toolbaritemname = "Custom009!"
+this.toolbaritemtext = "テーブル削除"
+this.toolbaritemorder = 8
+end on
+
+on m_droptable.destroy
+call super::destroy
+end on
+
+type m_window from m_dynsql_frame`m_window within m_dynsql_format1
+end type
+
+on m_window.create
+call super::create
+this.visible = true
+this.enabled = true
+end on
+
+on m_window.destroy
+call super::destroy
+end on
+
+type m_tilevertical from m_dynsql_frame`m_tilevertical within m_window
+end type
+
+on m_tilevertical.create
+call super::create
+this.toolbaritemname = "Tile!"
+this.toolbaritemtext = "左右に並べて表示"
+end on
+
+on m_tilevertical.destroy
+call super::destroy
+end on
+
+type m_tilehorizontal from m_dynsql_frame`m_tilehorizontal within m_window
+end type
+
+on m_tilehorizontal.create
+call super::create
+this.toolbaritemname = "Horizontal!"
+this.toolbaritemtext = "上下に並べて表示"
+end on
+
+on m_tilehorizontal.destroy
+call super::destroy
+end on
+
+type m_cascade from m_dynsql_frame`m_cascade within m_window
+end type
+
+on m_cascade.create
+call super::create
+this.toolbaritemname = "Cascade!"
+this.toolbaritemtext = "重ねて表示"
+end on
+
+on m_cascade.destroy
+call super::destroy
+end on
+
+type m_layer from m_dynsql_frame`m_layer within m_window
+end type
+
+on m_layer.create
+call super::create
+this.toolbaritemname = "Layer!"
+this.toolbaritemtext = "上重ね表示"
+this.toolbaritemorder = 30
+end on
+
+on m_layer.destroy
+call super::destroy
+end on
+
+type m_-1 from m_dynsql_frame`m_-1 within m_window
+end type
+
+on m_-1.create
+call super::create
+end on
+
+on m_-1.destroy
+call super::destroy
+end on
+
+type m_arrangeicons from m_dynsql_frame`m_arrangeicons within m_window
+end type
+
+on m_arrangeicons.create
+call super::create
+this.toolbaritemname = "ArrangeIcons!"
+this.toolbaritemtext = "アイコンの整列"
+this.toolbaritemorder = 35
+end on
+
+on m_arrangeicons.destroy
+call super::destroy
+end on
+
+type m_-2 from m_dynsql_frame`m_-2 within m_window
+end type
+
+on m_-2.create
+call super::create
+end on
+
+on m_-2.destroy
+call super::destroy
+end on
+
+type m_toolbar from m_dynsql_frame`m_toolbar within m_window
+end type
+
+on m_toolbar.create
+call super::create
+end on
+
+on m_toolbar.destroy
+call super::destroy
+end on
+
+type m_help from m_dynsql_frame`m_help within m_dynsql_format1
+end type
+
+on m_help.create
+call super::create
+end on
+
+on m_help.destroy
+call super::destroy
+end on
+
+type m_contents from m_dynsql_frame`m_contents within m_help
+end type
+
+on m_contents.create
+call super::create
+this.toolbaritemname = "Help!"
+this.toolbaritemtext = "ヘルプ"
+end on
+
+on m_contents.destroy
+call super::destroy
+end on
+
+type m_-3 from m_dynsql_frame`m_-3 within m_help
+end type
+
+on m_-3.create
+call super::create
+end on
+
+on m_-3.destroy
+call super::destroy
+end on
+
+type m_aboutdynamicsql4formats from m_dynsql_frame`m_aboutdynamicsql4formats within m_help
+end type
+
+on m_aboutdynamicsql4formats.create
+call super::create
+end on
+
+on m_aboutdynamicsql4formats.destroy
+call super::destroy
+end on
+

@@ -1,0 +1,26 @@
+﻿$PBExportHeader$d_sales_rep.srd
+$PBExportComments$分散処理サンプル アプリケーションのデータウィンドウで、販売担当者情報を表示するために使用します。
+release 7;
+datawindow(units=0 timer_interval=0 color=78682240 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=4 color="536870912" )
+footer(height=4 color="536870912" )
+detail(height=476 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes key=yes name=emp_id dbname="employee.emp_id" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=emp_fname dbname="employee.emp_fname" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=emp_lname dbname="employee.emp_lname" )
+ column=(type=char(13) update=yes updatewhereclause=yes name=phone dbname="employee.phone" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"employee~" ) COLUMN(NAME=~"employee.emp_id~") COLUMN(NAME=~"employee.emp_fname~") COLUMN(NAME=~"employee.emp_lname~") COLUMN(NAME=~"employee.phone~")) " update="employee" updatewhere=1 updatekeyinplace=no )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="5" color="0" x="384" y="135" height="60" width="532" format="[general]"  name=emp_lname  tag="従業員の姓" edit.limit=20 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=4 alignment="0" tabsequence=32766 border="5" color="0" x="384" y="359" height="60" width="404" format="[general]"  name=phone  tag="従業員の電話番号" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="1" tabsequence=32766 border="5" color="0" x="384" y="25" height="60" width="212" format="[general]"  name=emp_id  tag="従業員ID" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="5" color="0" x="388" y="249" height="60" width="416" format="[general]"  name=emp_fname  tag="従業員の名" edit.limit=20 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="名:" border="0" color="0" x="40" y="249" height="53" width="328"  name=emp_fname_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="姓:" border="0" color="0" x="40" y="135" height="53" width="328"  name=emp_lname_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="電話番号:" border="0" color="0" x="40" y="359" height="53" width="328"  name=phone_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="従業員ID:" border="0" color="0" x="40" y="25" height="50" width="328"  name=emp_id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

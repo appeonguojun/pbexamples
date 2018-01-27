@@ -1,0 +1,12 @@
+﻿$PBExportHeader$f_getversion.srf
+$PBExportComments$PowerBuilderのバージョンを取得します。
+global type f_getversion from function_object
+end type
+
+forward prototypes
+global function string f_getversion ()
+end prototypes
+
+global function string f_getversion ();Return sVersion
+end function
+

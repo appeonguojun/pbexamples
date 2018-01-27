@@ -1,0 +1,9 @@
+﻿$PBExportHeader$s_datasource.srs
+$PBExportComments$分散 PB サンプル プログラムの構造体で、レポート データを保持するのに使用します。
+global type s_datasource from structure
+	string		s_datasource
+	string		s_syntax
+	string		s_report
+	string		s_data
+end type
+

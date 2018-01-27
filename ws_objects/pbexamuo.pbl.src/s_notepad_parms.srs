@@ -1,0 +1,10 @@
+﻿$PBExportHeader$s_notepad_parms.srs
+$PBExportComments$PB Notepad サンプル プログラムがパラメータを渡したり、受け取るのに使用する構造体です。
+global type s_notepad_parms from structure
+    string find_string
+    string replace_string
+    string replace_event
+    integer find_loc
+    boolean uplow
+end type
+

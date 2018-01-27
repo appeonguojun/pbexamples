@@ -1,0 +1,17 @@
+﻿$PBExportHeader$d_table_list.srd
+$PBExportComments$タブラ提示様式: Quick Select サンプル プログラムで使用される pbcattbl テーブルに格納されているテーブル名をリストします。
+release 5;
+datawindow(units=0 timer_interval=0 color=1083244543 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=1 color="536870912" )
+summary(height=4 color="536870912" )
+footer(height=4 color="536870912" )
+detail(height=65 color="536870912" )
+table(column=(type=char(129) name=tname dbname="pbt_tnam" )
+ column=(type=char(254) name=pbt_cmnt dbname="pbt_cmnt" )
+ retrieve="PBSELECT( VERSION(400) DISTINCT ()TABLE(NAME=~"pbcattbl~" ) COLUMN(NAME=~"pbcattbl.pbt_tnam~") COLUMN(NAME=~"pbcattbl.pbt_cmnt~")) ORDER(NAME=~"pbcattbl.pbt_tnam~" ASC=yes ) " )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="33554592" x="15" y="3" height="58" width="1309" format="[general]"  name=tname edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

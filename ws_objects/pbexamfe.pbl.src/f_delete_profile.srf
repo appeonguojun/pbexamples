@@ -1,0 +1,13 @@
+﻿$PBExportHeader$f_delete_profile.srf
+$PBExportComments$INI ファイルやレジストリに登録されている項目を削除する関数
+global type f_delete_profile from function_object
+end type
+
+forward prototypes
+global function integer f_delete_profile (string as_section, string as_name)
+end prototypes
+
+global function integer f_delete_profile (string as_section, string as_name);// Use the registry
+Return RegistryDelete( sREGKEY + "\Code Examples" + as_section, as_name)
+end function
+

@@ -1,0 +1,8 @@
+﻿$PBExportHeader$str_graphobjectatpoint.srs
+$PBExportComments$現在ポインタのある場所のパラメータを引き渡すための構造体
+global type str_graphobjectatpoint from structure
+    graphicobject graphicobject
+    int series
+    int datapoint
+end type
+

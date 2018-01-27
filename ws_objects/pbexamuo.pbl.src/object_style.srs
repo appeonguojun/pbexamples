@@ -1,0 +1,13 @@
+﻿$PBExportHeader$object_style.srs
+$PBExportComments$U_STYLE_BAR の中のコントロールのフィールド
+global type object_style from structure
+    string text
+    string border
+    string font_face
+    string font_height
+    string font_weight
+    string alignment
+    string italic
+    string underline
+end type
+

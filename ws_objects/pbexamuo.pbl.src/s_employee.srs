@@ -1,0 +1,13 @@
+﻿$PBExportHeader$s_employee.srs
+$PBExportComments$従業員情報管理システムでウィンドウ間で情報を渡すのに使用する構造体です。
+global type s_employee from structure
+	long		department
+    string dept_name
+	long		manager_id
+	long		employee_id
+    boolean auto_new
+    w_eis_dept dept_win
+    w_eis_emp emp_win
+    boolean no_edit
+end type
+

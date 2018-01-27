@@ -1,0 +1,84 @@
+﻿$PBExportHeader$d_rte_mail_merge.srd
+$PBExportComments$メール作成に使用するリッチテキスト提示様式のデータウィンドウ
+release 11;
+datawindow(units=2 timer_interval=0 color=1073741824 processing=7 print.printername ="" print.documentname="" print.orientation = 0 print.margin.left = 1000 print.margin.right = 1000 print.margin.top = 1000 print.margin.bottom = 1000 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.cliptext=no print.overrideprintjob=no print.collate=yes print.preview.outline=yes richtext.headerfooter=yes richtext.wordwrap=yes richtext.popmenu=yes richtext.pictureframe=no richtext.inputfieldnamesvisible=no richtext.inputfieldsvisible=yes richtext.tabsvisible=no richtext.returnsvisible=no richtext.spacesvisible=no richtext.inputfieldbackcolor=16777215 richtext.backcolor=1073741824 richtext.tabbar=no richtext.rulerbar=no richtext.toolbar=no richtext.displayonly=no )
+detail(text="{\rtf1\ansi\ansicpg932\uc1\deff0{\fonttbl
+{\f0\fswiss\fcharset128\fprq2 Lucida Sans Unicode;}
+{\f1\fswiss\fcharset128\fprq2 Tahoma;}
+{\f2\froman\fcharset2\fprq2 Symbol;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;}
+{\stylesheet{\s0\itap0\nowidctlpar\f0\fs24 [Normal];}{\*\cs10\additive Default Paragraph Font;}}
+{\*\generator TX_RTF32 13.0.501.501;}
+\deftab1134\paperw11905\paperh16838\margl0\margt0\margr0\margb0\widowctrl
+{\*\background{\shp{\*\shpinst\shpleft0\shptop0\shpright0\shpbottom0\shpfhdr0\shpbxmargin\shpbxignore\shpbymargin\shpbyignore\shpwr0\shpwrk0\shpfblwtxt1\shplid1025{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 16777215}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn lineWidth}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fBackground}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}}}\pard\itap0\nowidctlpar\qr\plain\f1\fs20\cf3{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0054004f004400410059007d000000}{\*\txfieldtext \{TODAY\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{TODAY\}}}{\fldrslt{\{TODAY\}}}}}\plain\f1\fs20\par\pard\itap0\nowidctlpar\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b005300540041005400450053005f00530054004100540045005f004e0041004d0045007d000000}{\*\txfieldtext \{STATES_STATE_NAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{STATES_STATE_NAME\}}}{\fldrslt{\{STATES_STATE_NAME\}}}}}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0043005500530054004f004d00450052005f0043004900540059007d000000}{\*\txfieldtext \{CUSTOMER_CITY\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{CUSTOMER_CITY\}}}{\fldrslt{\{CUSTOMER_CITY\}}}}}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0043005500530054004f004d00450052005f0041004400440052004500530053007d000000}{\*\txfieldtext \{CUSTOMER_ADDRESS\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{CUSTOMER_ADDRESS\}}}{\fldrslt{\{CUSTOMER_ADDRESS\}}}}}\plain\f1\fs20\par     \plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0043005500530054004f004d00450052005f0043004f004d00500041004e0059005f004e0041004d0045007d000000}{\*\txfieldtext \{CUSTOMER_COMPANY_NAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{CUSTOMER_COMPANY_NAME\}}}{\fldrslt{\{CUSTOMER_COMPANY_NAME\}}}}}\plain\f1\fs20\par         \plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0043005500530054004f004d00450052005f004c004e0041004d0045007d000000}{\*\txfieldtext \{CUSTOMER_LNAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{CUSTOMER_LNAME\}}}{\fldrslt{\{CUSTOMER_LNAME\}}}}}\plain\f1\fs20  \plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0043005500530054004f004d00450052005f0046004e0041004d0045007d000000}{\*\txfieldtext \{CUSTOMER_FNAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{CUSTOMER_FNAME\}}}{\fldrslt{\{CUSTOMER_FNAME\}}}}}\plain\f1\fs20  \loch\f1\hich\f1{\uc2\u27096\'97\'6c}\par\par\tab{\uc2\u25309\'94\'71\u21843\'8c\'5b\u12289\'81\'41\u-29516\'8b\'4d\u31038\'8e\'d0\u12414\'82\'dc\u12377\'82\'b7\u12414\'82\'dc\u12377\'82\'b7\u12372\'82\'b2\u-27002\'97\'b2\u30427\'90\'b7\u12398\'82\'cc\u27573\'92\'69\u12362\'82\'a8\u21916\'8a\'ec\u12403\'82\'d1\u30003\'90\'5c\u12375\'82\'b5\u12354\'82\'a0\u12370\'82\'b0\u12414\'82\'dc\u12377\'82\'b7\u12290\'81\'42}\par\par\tab{\uc2\u12373\'82\'b3\u12390\'82\'c4\u12289\'81\'41\u24330\'95\'be\u31038\'8e\'d0\u12398\'82\'cc\u-30184\'8b\'4c\u-27854\'98\'5e\u12395\'82\'c9\u12424\'82\'e6\u12426\'82\'e8\u12414\'82\'dc\u12377\'82\'b7\u12392\'82\'c6\u24481\'8c\'e4\u31038\'8e\'d0\u12363\'82\'a9\u12425\'82\'e7\u12371\'82\'b1\u12371\'82\'b1\u12375\'82\'b5\u12400\'82\'ce\u12425\'82\'e7\u12367\'82\'ad\u12372\'82\'b2\u27880\'92\'8d\u25991\'95\'b6\u12434\'82\'f0\u-26622\'92\'b8\u12356\'82\'a2\u12390\'82\'c4\u12356\'82\'a2\u12394\'82\'c8\u12356\'82\'a2\u12424\'82\'e6\u12358\'82\'a4\u12391\'82\'c5\u12372\'82\'b2\u12374\'82\'b4\u12356\'82\'a2\u12414\'82\'dc\u12377\'82\'b7\u12290\'81\'42}\par\tab{\uc2\u21069\'91\'4f\u22238\'89\'f1\u12289\'81\'41} {\uc2\u12372\'82\'b2\u27880\'92\'8d\u25991\'95\'b6\u12434\'82\'f0\u-26622\'92\'b8\u12356\'82\'a2\u12383\'82\'bd\u12398\'82\'cc\u12399\'82\'cd}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b00530041004c00450053005f004f0052004400450052005f004f0052004400450052005f0044004100540045007d000000}{\*\txfieldtext \{SALES_ORDER_ORDER_DATE\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{SALES_ORDER_ORDER_DATE\}}}{\fldrslt{\{SALES_ORDER_ORDER_DATE\}}}}}\plain\f1\fs20\loch\f1\hich\f1{\uc2\u12398\'82\'cc\u27880\'92\'8d\u25991\'95\'b6\u30058\'94\'d4\u21495\'8d\'86}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b00530041004c00450053005f004f0052004400450052005f00490044007d000000}{\*\txfieldtext \{SALES_ORDER_ID\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{SALES_ORDER_ID\}}}{\fldrslt{\{SALES_ORDER_ID\}}}}}\plain\f1\fs20\loch\f1\hich\f1{\uc2\u30058\'94\'d4\u12391\'82\'c5\u12372\'82\'b2\u12374\'82\'b4\u12356\'82\'a2\u12414\'82\'dc\u12375\'82\'b5\u12383\'82\'bd\u12290\'81\'42}\par\tab{\uc2\u20197\'88\'c8\u26469\'97\'88} {\uc2\u12289\'81\'41}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0044004100590053007d000000}{\*\txfieldtext \{DAYS\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{DAYS\}}}{\fldrslt{\{DAYS\}}}}}\plain\f1\fs20\loch\f1\hich\f1{\uc2\u12434\'82\'f0\u32076\'8c\'6f\u-28594\'89\'df\u12375\'82\'b5\u12390\'82\'c4\u-30467\'90\'bb\u21697\'95\'69\u12398\'82\'cc\u21697\'95\'69\u-29462\'8e\'bf\u12289\'81\'41\u31278\'8e\'ed\u-26530\'97\'de\u12418\'82\'e0\u12373\'82\'b3\u12425\'82\'e7\u12395\'82\'c9\u20805\'8f\'5b\u23455\'8e\'c0\u12375\'82\'b5\u12390\'82\'c4\u12362\'82\'a8\u12426\'82\'e8\u12414\'82\'dc\u12377\'82\'b7\u12398\'82\'cc\u12391\'82\'c5\u12289\'81\'41}\par\tab{\uc2\u19968\'88\'ea\u24230\'93\'78\u-30093\'8f\'da\u12375\'82\'b5\u12367\'82\'ad\u-30036\'90\'e0\u26126\'96\'be\u12377\'82\'b7\u12427\'82\'e9\u27231\'8b\'40\u20250\'89\'ef\u12434\'82\'f0\u12356\'82\'a2\u12383\'82\'bd\u12384\'82\'be\u12369\'82\'af\u12428\'82\'ea\u12400\'82\'ce\u24184\'8d\'4b\u29978\'90\'72\u12395\'82\'c9\u23384\'91\'b6\u12376\'82\'b6\u12414\'82\'dc\u12377\'82\'b7\u12290\'81\'42}\par\tab{\uc2\u24481\'8c\'e4\u31038\'8e\'d0\u12398\'82\'cc\u12372\'82\'b2\u-30335\'97\'76\u26395\'96\'5d\u12395\'82\'c9\u27839\'89\'88\u12360\'82\'a6\u12427\'82\'e9\u-30467\'90\'bb\u21697\'95\'69\u12434\'82\'f0\u21462\'8e\'e6\u12426\'82\'e8\u25539\'91\'b5\u12360\'82\'a6\u12390\'82\'c4\u12356\'82\'a2\u12427\'82\'e9\u12392\'82\'c6\u30906\'8a\'6d\u20449\'90\'4d\u12375\'82\'b5\u12390\'82\'c4\u12362\'82\'a8\u12426\'82\'e8\u12414\'82\'dc\u12377\'82\'b7\u12398\'82\'cc\u12391\'82\'c5\u12289\'81\'41}\par\tab{\uc2\u12372\'82\'b2\u26908\'8c\'9f\u-30194\'93\'a2\u12398\'82\'cc\u12358\'82\'a4\u12360\'82\'a6\u12289\'81\'41\u12372\'82\'b2\u-28419\'93\'73\u21512\'8d\'87\u12398\'82\'cc\u-32145\'97\'c7\u12356\'82\'a2\u26085\'93\'fa\u12434\'82\'f0\u12372\'82\'b2\u-28637\'98\'41\u32097\'97\'8d\u12356\'82\'a2\u12383\'82\'bd\u12384\'82\'be\u12369\'82\'af\u12428\'82\'ea\u12400\'82\'ce\u12354\'82\'a0\u12426\'82\'e8\u12364\'82\'aa\u12383\'82\'bd\u12367\'82\'ad\u23384\'91\'b6\u12376\'82\'b6\u12414\'82\'dc\u12377\'82\'b7\u12290\'81\'42}\par  \par\tab\tab\tab\tab\tab\tab\tab{\uc2\u25964\'8c\'68\u20855\'8b\'ef}\par\par{\uc2\u12490\'83\'69\u12452\'83\'43\u12488\'83\'67} {\uc2\u12473\'83\'58\u12509\'83\'7c\u12540\'81\'5b\u12484\'83\'63\u26666\'8a\'94\u24335\'8e\'ae\u20250\'89\'ef\u31038\'8e\'d0}\par\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0045004d0050004c004f005900450045005f0045004d0050005f004c004e0041004d0045007d000000}{\*\txfieldtext \{EMPLOYEE_EMP_LNAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{EMPLOYEE_EMP_LNAME\}}}{\fldrslt{\{EMPLOYEE_EMP_LNAME\}}}}}\plain\f1\fs20{\txfielddef{\*\txfieldstart\txfieldtype0\txfieldflags152\txfielddata 7b0045004d0050004c004f005900450045005f0045004d0050005f0046004e0041004d0045007d000000}{\*\txfieldtext \{EMPLOYEE_EMP_FNAME\}}{\field\fldlock{\*\fldinst { MERGEFIELD \{EMPLOYEE_EMP_FNAME\}}}{\fldrslt{\{EMPLOYEE_EMP_FNAME\}}}}}\plain\f1\fs20\par\loch\f1\hich\f1{\uc2\u12306\'81\'a7} 111 {\uc2\u26481\'93\'8c\u20140\'8b\'9e\u-28419\'93\'73} {\uc2\u21488\'91\'e4\u26481\'93\'8c\u21306\'8b\'e6} {\uc2\u26611\'96\'f6\u27211\'8b\'b4} 2-1-2\par TEL 03-1134-5667 FAX 03-1134-5668\par\pard\itap0\nowidctlpar}")
+header(text="{\rtf1\ansi\ansicpg932\uc1\deff0{\fonttbl
+{\f0\fswiss\fcharset128\fprq2 Lucida Sans Unicode;}
+{\f1\fswiss\fcharset128\fprq2 Tahoma;}
+{\f2\froman\fcharset2\fprq2 Symbol;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;}
+{\stylesheet{\s0\itap0\nowidctlpar\f0\fs24 [Normal];}{\*\cs10\additive Default Paragraph Font;}}
+{\*\generator TX_RTF32 13.0.501.501;}
+\deftab1134\paperw11905\paperh16838\margl0\margt0\margr0\margb0\widowctrl
+{\*\background{\shp{\*\shpinst\shpleft0\shptop0\shpright0\shpbottom0\shpfhdr0\shpbxmargin\shpbxignore\shpbymargin\shpbyignore\shpwr0\shpwrk0\shpfblwtxt1\shplid1025{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 16777215}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn lineWidth}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fBackground}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}}}\pard\itap0\nowidctlpar\plain\f1\fs20}")
+footer(text="{\rtf1\ansi\ansicpg932\uc1\deff0{\fonttbl
+{\f0\fswiss\fcharset128\fprq2 Lucida Sans Unicode;}
+{\f1\fswiss\fcharset128\fprq2 Tahoma;}
+{\f2\froman\fcharset2\fprq2 Symbol;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;}
+{\stylesheet{\s0\itap0\nowidctlpar\f0\fs24 [Normal];}{\*\cs10\additive Default Paragraph Font;}}
+{\*\generator TX_RTF32 13.0.501.501;}
+\deftab1134\paperw11905\paperh16838\margl0\margt0\margr0\margb0\widowctrl
+{\*\background{\shp{\*\shpinst\shpleft0\shptop0\shpright0\shpbottom0\shpfhdr0\shpbxmargin\shpbxignore\shpbymargin\shpbyignore\shpwr0\shpwrk0\shpfblwtxt1\shplid1025{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 16777215}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn lineWidth}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fBackground}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}}}\pard\itap0\nowidctlpar\plain\f1\fs20}")table(column=(type=char(15) updatewhereclause=yes name=customer_fname dbname="customer.fname" dbalias=".fname" )
+ column=(type=char(20) updatewhereclause=yes name=customer_lname dbname="customer.lname" dbalias=".lname" )
+ column=(type=char(35) updatewhereclause=yes name=customer_company_name dbname="customer.company_name" dbalias=".company_name" )
+ column=(type=char(35) updatewhereclause=yes name=customer_address dbname="customer.address" dbalias=".address" )
+ column=(type=char(20) updatewhereclause=yes name=customer_city dbname="customer.city" dbalias=".city" )
+ column=(type=char(10) updatewhereclause=yes name=customer_state dbname="customer.state" dbalias=".state" )
+ column=(type=char(10) updatewhereclause=yes name=customer_zip dbname="customer.zip" dbalias=".zip" )
+ column=(type=char(20) updatewhereclause=yes name=employee_emp_fname dbname="employee.emp_fname" dbalias=".emp_fname" )
+ column=(type=char(20) updatewhereclause=yes name=employee_emp_lname dbname="employee.emp_lname" dbalias=".emp_lname" )
+ column=(type=long updatewhereclause=yes name=sales_order_id dbname="sales_order.id" dbalias=".id" )
+ column=(type=date updatewhereclause=yes name=sales_order_order_date dbname="sales_order.order_date" dbalias=".order_date" )
+ column=(type=char(24) updatewhereclause=yes name=states_state_name dbname="states.state_name" dbalias=".state_name" )
+ retrieve="  SELECT ~"customer~".~"fname~",   
+         ~"customer~".~"lname~",   
+         ~"customer~".~"company_name~",   
+         ~"customer~".~"address~",   
+         ~"customer~".~"city~",   
+         ~"customer~".~"state~",   
+         ~"customer~".~"zip~",   
+         ~"employee~".~"emp_fname~",   
+         ~"employee~".~"emp_lname~",   
+         ~"sales_order~".~"id~",   
+         ~"sales_order~".~"order_date~",
+         ~"states~".~"state_name~"  
+    FROM ~"customer~",   
+         ~"employee~",   
+         ~"sales_order~" ,
+         ~"states~" 
+   WHERE ( ~"employee~".~"emp_id~" = ~"sales_order~".~"sales_rep~" ) and 
+          ( ~"customer~".~"state~" = ~"states~".~"state_id~" ) and  
+          ( ~"customer~".~"id~" = ~"sales_order~".~"cust_id~" ) and  
+         ( ( customer.id not in (SELECT ~"cust_id~" FROM ~"sales_order~" WHERE (~"order_date~" >= :last_order_date) ) ) AND  
+         ( customer.id || String(sales_order.order_date) in (SELECT ~"cust_id~" || String(Max(~"order_date~")) FROM ~"sales_order~" GROUP BY ~"cust_id~") ) )    
+ORDER BY ~"employee~".~"emp_lname~" ASC,   
+         ~"employee~".~"emp_fname~" ASC,   
+         ~"customer~".~"company_name~" ASC   
+" arguments=(("last_order_date", date)) )
+compute(name=days visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" format="[general]" expression="String(truncate(daysafter( sales_order_order_date , today())/30 ,0)) + ' ヶ月以上'" )
+compute(name=today visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" format="yyyy'年 'm'月 'd'日' " expression="today()" )
+column(name=customer_fname id=1 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_lname id=2 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_company_name id=3 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_address id=4 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_city id=5 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_state id=6 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=customer_zip id=7 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=employee_emp_fname id=8 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=employee_emp_lname id=9 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=sales_order_id id=10 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+column(name=sales_order_order_date id=11 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="yyyy'年 'm'月 'd'日' " )
+column(name=states_state_name id=12 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=0 format="[general]" )
+htmltable(border="1" cellpadding="0" cellspacing="0" generatecss="no" nowrap="yes")
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()

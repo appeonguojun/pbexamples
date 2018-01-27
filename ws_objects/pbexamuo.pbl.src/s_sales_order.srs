@@ -1,0 +1,11 @@
+﻿$PBExportHeader$s_sales_order.srs
+$PBExportComments$分散 PB サンプル プログラムの構造体で、販売受注データを保持するのに使用します。
+global type s_sales_order from structure
+	long		id
+	long		cust_id
+	string		fin_code_id
+	string		region
+	long		sales_rep
+	date		order_date
+end type
+

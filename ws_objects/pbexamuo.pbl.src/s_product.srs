@@ -1,0 +1,12 @@
+﻿$PBExportHeader$s_product.srs
+$PBExportComments$分散 PB サンプル プログラムの構造体で、商品データを保持するのに使用します。
+global type s_product from structure
+	int		id
+	string		name
+	string		description
+	string		prod_size
+	string		color
+	int		quanity
+	decimal {2}	uint_price
+end type
+

@@ -1,0 +1,28 @@
+﻿$PBExportHeader$d_n_up.srd
+$PBExportComments$従業員テーブル (Employee) のデータを、1 行のデータをデータウィンドウの 2 行に渡って表示するデータウィンドウ
+release 7;
+datawindow(units=0 timer_interval=0 color=1083244543 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 0 print.margin.right = 0 print.margin.top = 0 print.margin.bottom = 0 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no rows_per_detail = 2 )
+header(height=68 color="536870912" )
+summary(height=4 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=71 color="536870912" )
+table(column=(type=char(20) updatewhereclause=yes name=employee_emp_fname dbname="employee.emp_fname" )
+ column=(type=char(20) updatewhereclause=yes name=employee_emp_lname dbname="employee.emp_lname" )
+ column=(type=char(40) updatewhereclause=yes name=department_dept_name dbname="department.dept_name" )
+ retrieve="PBSELECT(TABLE(NAME=~"department~" ) TABLE(NAME=~"employee~" ) COLUMN(NAME=~"employee.emp_fname~") COLUMN(NAME=~"employee.emp_lname~") COLUMN(NAME=~"department.dept_name~") JOIN (LEFT=~"department.dept_id~" OP =~"=~"RIGHT=~"employee.dept_id~" )) ORDER(NAME=~"employee.emp_lname~" ASC=yes ) " )
+text(band=header alignment="0" text="部署" border="0" color="33554592" x="708" y="4" height="53" width="320"  name=department_dept_name_t_1  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="128" font.underline="1" background.mode="2" background.color="1083244543" )
+text(band=header alignment="0" text="従業員名" border="0" color="33554592" x="1444" y="4" height="53" width="508"  name=employee_emp_lname_t_2  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="128" font.underline="1" background.mode="2" background.color="1083244543" )
+text(band=header alignment="0" text="部署" border="0" color="33554592" x="2068" y="4" height="53" width="324"  name=department_dept_name_t_2  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="128" font.underline="1" background.mode="2" background.color="1083244543" )
+text(band=header alignment="0" text="従業員名" border="0" color="33554592" x="32" y="4" height="53" width="508"  name=t_1  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="128" font.underline="1" background.mode="2" background.color="1083244543" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="33554592" x="32" y="3" height="60" width="268" format="[general]" row_in_detail=1  name=employee_emp_lname_1 edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="33554592" x="308" y="3" height="60" width="276" format="[general]" row_in_detail=1  name=employee_emp_fname_1 edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="33554592" x="708" y="3" height="60" width="628" format="[general]" row_in_detail=1  name=department_dept_name_1 edit.limit=40 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="33554592" x="1744" y="3" height="60" width="300" format="[general]" row_in_detail=2  name=employee_emp_fname_2 edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="33554592" x="2068" y="3" height="60" width="1576" format="[general]" row_in_detail=2  name=department_dept_name_2 edit.limit=40 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="33554592" x="1444" y="3" height="60" width="296" format="[general]" row_in_detail=2  name=employee_emp_lname_2 edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

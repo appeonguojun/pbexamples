@@ -1,0 +1,16 @@
+﻿$PBExportHeader$d_clock.srd
+$PBExportComments$データウィンドウのリフレッシュ タイマを使用した時計
+release 11.5;
+datawindow(units=0 timer_interval=1000 color=78682240 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 1 print.margin.right = 1 print.margin.top = 1 print.margin.bottom = 1 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=84 color="536870912" )
+summary(height=1 color="536870912" )
+footer(height=1 color="536870912" )
+detail(height=13 color="536870912" )
+table(column=(type=date name=x dbname="x" )
+ )
+compute(band=header alignment="0" expression="today()"border="0" color="33554432" x="22" y="16" height="52" width="754" format="mm/dd/yyyy h:mm:ss AM/PM"  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

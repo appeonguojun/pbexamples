@@ -1,0 +1,25 @@
+﻿$PBExportHeader$d_employee_phones.srd
+$PBExportComments$Phone #'s of employees for modem dialer example
+release 7;
+datawindow(units=0 timer_interval=0 color=78682240 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+header(height=203 color="536870912" )
+summary(height=-4 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=82 color="536870912" )
+table(column=(type=char(20) updatewhereclause=yes name=emp_lname dbname="employee.emp_lname" )
+ column=(type=char(20) updatewhereclause=yes name=emp_fname dbname="employee.emp_fname" )
+ column=(type=char(13) updatewhereclause=yes name=phone dbname="employee.phone" )
+ retrieve="PBSELECT(TABLE(NAME=~"employee~" ) COLUMN(NAME=~"employee.emp_lname~") COLUMN(NAME=~"employee.emp_fname~") COLUMN(NAME=~"employee.phone~")) ORDER(NAME=~"employee.emp_lname~" ASC=yes ) ORDER(NAME=~"employee.emp_fname~" ASC=yes ) " )
+text(band=header alignment="2" text="従業員電話帳" border="0" color="33554592" x="376" y="0" height="71" width="744"  name=t_1  font.face="ＭＳ Ｐゴシック" font.height="-12" font.weight="400"  font.family="0" font.pitch="0" font.charset="0" font.underline="1" background.mode="2" background.color="78682240" )
+text(band=header alignment="2" text="従業員性" border="6" color="33554592" x="4" y="96" height="103" width="528"  name=emp_lname_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=header alignment="2" text="電話番号" border="6" color="33554592" x="1096" y="96" height="103" width="504"  name=phone_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=header alignment="2" text="従業員名" border="6" color="33554592" x="552" y="96" height="103" width="528"  name=emp_fname_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="5" color="33554592" x="4" y="11" height="57" width="528" format="[general]"  name=emp_lname edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="5" color="33554592" x="552" y="11" height="57" width="528" format="[general]"  name=emp_fname edit.limit=20 edit.case=any edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="5" color="33554592" x="1096" y="11" height="57" width="504" format="[general]"  name=phone edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

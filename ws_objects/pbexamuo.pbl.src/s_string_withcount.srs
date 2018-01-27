@@ -1,0 +1,7 @@
+﻿$PBExportHeader$s_string_withcount.srs
+$PBExportComments$分散 PB サンプル プログラムの構造体で、文字列や数値を保持します。
+global type s_string_withcount from structure
+	long		i_count
+	string		s_string_data
+end type
+

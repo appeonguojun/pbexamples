@@ -1,0 +1,28 @@
+﻿$PBExportHeader$d_sp_order_items.srd
+$PBExportComments$ストアド プロシージャを使用して、受注された商品をリストします。
+release 7;
+datawindow(units=0 timer_interval=0 color=1086902488 processing=1 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 )
+header(height=71 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=75 color="536870912" )
+table(column=(type=number updatewhereclause=yes name=line_id dbname="line_id" )
+ column=(type=number updatewhereclause=yes name=prod_id dbname="prod_id" )
+ column=(type=number updatewhereclause=yes name=quantity dbname="quantity" )
+ column=(type=date updatewhereclause=yes name=ship_date dbname="ship_date" )
+ procedure="1 execute sp_sales_order_items;0 ord_id = :ord_id, product = :product" arguments=(("ord_id", number),("product", number)) )
+text(band=header alignment="2" text="商品ID" border="0" color="41943040" x="292" y="7" height="60" width="296"  name=prod_id_t  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="2" background.color="1086902488" )
+text(band=header alignment="2" text="数量" border="0" color="41943040" x="596" y="7" height="60" width="272"  name=quantity_t  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="2" background.color="1086902488" )
+text(band=header alignment="2" text="発送日" border="0" color="41943040" x="880" y="7" height="60" width="328"  name=ship_date_t  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="2" background.color="1086902488" )
+text(band=header alignment="2" text="項目番号" border="0" color="41943040" x="8" y="7" height="60" width="276"  name=line_id_t  font.face="ＭＳ ゴシック" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="128" background.mode="2" background.color="1086902488" )
+rectangle(band=detail x="4" y="4" height="60" width="1208~tif (prod_id = product, 1200, 0)"  name=r_1 brush.hatch="6" brush.color="65535" pen.style="0" pen.width="4" pen.color="65535"  background.mode="2" background.color="-2147418113" )
+column(band=detail id=4 alignment="0" tabsequence=32766 border="0" color="41943040" x="880" y="4" height="60" width="328" format="yyyy/mm/dd"  name=ship_date edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ ゴシック" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+column(band=detail id=3 alignment="1" tabsequence=32766 border="0" color="41943040" x="596" y="4" height="60" width="272" format="###,##0"  name=quantity edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ ゴシック" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+column(band=detail id=2 alignment="1" tabsequence=32766 border="0" color="41943040" x="292" y="4" height="60" width="292" format="[general]"  name=prod_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ ゴシック" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+column(band=detail id=1 alignment="1" tabsequence=32766 border="0" color="41943040" x="8" y="4" height="60" width="276" format="[general]"  name=line_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ ゴシック" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

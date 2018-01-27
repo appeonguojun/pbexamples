@@ -1,0 +1,7 @@
+﻿$PBExportHeader$str_disk.srs
+$PBExportComments$構造体
+global type str_disk from structure
+    integer size
+    long color
+end type
+

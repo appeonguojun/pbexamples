@@ -1,0 +1,20 @@
+﻿$PBExportHeader$d_quick_column_list.srd
+$PBExportComments$Quick Select サンプル プログラムで使用するデータウィンドウ。選択したテーブルのカラムをリストします。
+release 5;
+datawindow(units=0 timer_interval=0 color=1083244543 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 0 print.margin.right = 0 print.margin.top = 0 print.margin.bottom = 0 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=1 color="-1" )
+summary(height=10 color="536870912" )
+footer(height=4 color="536870912" )
+detail(height=71 color="-1" )
+table(column=(type=char(30) name=pbc_cnam dbname="pbcatcol.pbc_cnam" )
+ column=(type=char(254) name=label dbname="pbcatcol.pbc_labl" )
+ column=(type=char(254) name=pbc_cmnt dbname="pbcatcol.pbc_cmnt" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"pbcatcol~" ) COLUMN(NAME=~"pbcatcol.pbc_cnam~") COLUMN(NAME=~"pbcatcol.pbc_labl~") COLUMN(NAME=~"pbcatcol.pbc_cmnt~")WHERE( EXP1 =~"pbcatcol.pbc_tnam~" OP =~"=~" EXP2 =~":aTableName~" ) ) ORDER(NAME=~"pbcatcol.pbc_hdr~" ASC=yes ) ARG(NAME = ~"aTableName~" TYPE = string) " arguments=(("aTableName", string)) )
+compute(band=detail alignment="0" expression="(  if( right(  label , 1 )=~":~", left(   label  , len(  label  ) -1 ),  label   ) )"border="0" color="33554592" x="8" y="3" height="61" width="861" format="[general]"  name=collabel  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=2 alignment="0" tabsequence=10 border="0" color="33554592" x="982" y="3" height="61" width="7371" format="[general]"  name=label edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+column(band=detail id=3 alignment="0" tabsequence=20 border="0" color="33554592" x="8370" y="54" height="55" width="9398" format="[general]"  name=pbc_cmnt edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1083244543" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

@@ -1,0 +1,17 @@
+﻿$PBExportHeader$d_column_list.srd
+$PBExportComments$テーブルのカラム名
+release 11.5;
+datawindow(units=0 timer_interval=0 color=1090519039 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 0 print.margin.right = 0 print.margin.top = 0 print.margin.bottom = 0 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=1 color="536870912" )
+summary(height=10 color="536870912" )
+footer(height=4 color="536870912" )
+detail(height=65 color="536870912" )
+table(column=(type=char(129) name=cname dbname="pbc_cnam" )
+ column=(type=char(254) name=pbc_cmnt dbname="pbc_cmnt" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"pbcatcol~" ) COLUMN(NAME=~"pbcatcol.pbc_cnam~") COLUMN(NAME=~"pbcatcol.pbc_cmnt~")) ORDER(NAME=~"pbcatcol.pbc_hdr~" ASC=yes ) " )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="33554432" x="22" y="3" height="58" width="861" format="[general]"  name=cname edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1090519039" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

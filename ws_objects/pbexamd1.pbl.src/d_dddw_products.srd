@@ -1,0 +1,20 @@
+﻿$PBExportHeader$d_dddw_products.srd
+$PBExportComments$製品のドロップダウンデータウィンドウ
+release 5;
+datawindow(units=0 timer_interval=0 color=1073774592 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 107 print.margin.right = 107 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=1 color="536870912" )
+summary(height=4 color="536870912" )
+footer(height=1 color="536870912" )
+detail(height=68 color="536870912" )
+table(column=(type=long update=yes key=yes name=id dbname="product.id" )
+ column=(type=char(15) update=yes name=name dbname="product.name" )
+ column=(type=char(30) update=yes name=description dbname="product.description" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"product~" ) COLUMN(NAME=~"product.id~") COLUMN(NAME=~"product.name~") COLUMN(NAME=~"product.description~")) " update="product" updatewhere=1 updatekeyinplace=no )
+column(band=detail id=1 alignment="1" tabsequence=10 border="0" color="41943040" x="4" y="3" height="61" width="203" format="[general]"  name=id  tag="商品を識別するユニークなコード" edit.limit=0 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=3 alignment="0" tabsequence=30 border="0" color="41943040" x="680" y="3" height="61" width="754" format="[general]"  name=description  tag="商品の説明" edit.limit=30 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="0" tabsequence=20 border="0" color="41943040" x="239" y="3" height="61" width="409" format="[general]"  name=name  tag="商品名" edit.limit=15 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

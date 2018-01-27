@@ -1,0 +1,20 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "pbexamor.pbl" "";
+@end;
+@begin Objects 
+ "d_columns.srd" "pbexamor.pbl";
+ "d_crosstab.srd" "pbexamor.pbl";
+ "d_cust_phone_dir2.srd" "pbexamor.pbl";
+ "d_cust_products.srd" "pbexamor.pbl";
+ "d_example_report_detail.srd" "pbexamor.pbl";
+ "d_mode_median.srd" "pbexamor.pbl";
+ "d_order_data_for_graph.srd" "pbexamor.pbl";
+ "d_product_info.srd" "pbexamor.pbl";
+ "d_sp_contacts.srd" "pbexamor.pbl";
+ "d_sp_dddw_customers.srd" "pbexamor.pbl";
+ "d_sp_order_items.srd" "pbexamor.pbl";
+ "d_sp_orders.srd" "pbexamor.pbl";
+ "d_tables.srd" "pbexamor.pbl";
+ "p_create_full_sales_orders_sp.srp" "pbexamor.pbl";
+@end;

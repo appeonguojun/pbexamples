@@ -1,0 +1,20 @@
+﻿$PBExportHeader$d_drives.srd
+$PBExportComments$使用可能なドライブを表示するデータウィンドウ
+release 5;
+datawindow(units=0 timer_interval=0 color=78682240 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=1 color="536870912" )
+summary(height=-2 color="-1" )
+footer(height=1 color="-1" )
+detail(height=84 color="536870912" )
+table(column=(type=char(12) name=bmp_name dbname="bmp_name" )
+ column=(type=char(2) name=drive dbname="drive" )
+ column=(type=char(10) name=description dbname="description" )
+ )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="33554592" x="139" y="6" height="61" width="40" format="[general]"  name=drive edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="33554592" x="217" y="6" height="61" width="399" format="[general]"  name=description edit.limit=0 edit.case=any edit.autoselect=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+compute(band=detail alignment="0" expression="bitmap ( bmp_name )"border="0" color="33554592" x="18" y="6" height="61" width="107" format="[GENERAL]"  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

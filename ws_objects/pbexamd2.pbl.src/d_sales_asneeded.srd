@@ -1,0 +1,26 @@
+﻿$PBExportHeader$d_sales_asneeded.srd
+$PBExportComments$タブラ提示様式: 必要な行だけ検索を指定
+release 7;
+datawindow(units=0 timer_interval=0 color=78682240 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+header(height=82 color="536870912" )
+summary(height=0 color="-1" )
+footer(height=89 color="-1" )
+detail(height=89 color="-1" )
+table(column=(type=number updatewhereclause=yes name=id dbname="sales_order.id" )
+ column=(type=number updatewhereclause=yes name=cust_id dbname="sales_order.cust_id" )
+ column=(type=datetime updatewhereclause=yes name=order_date dbname="sales_order.order_date" initial="" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"sales_order~" ) COLUMN(NAME=~"sales_order.id~") COLUMN(NAME=~"sales_order.cust_id~") COLUMN(NAME=~"sales_order.order_date~")) " retrieve.asneeded=yes )
+text(band=header alignment="2" text="受注ID" border="6" color="33554592" x="8" y="11" height="53" width="240"  name=id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=header alignment="2" text="顧客ID" border="6" color="33554592" x="280" y="11" height="53" width="336"  name=cust_id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=header alignment="2" text="受注日" border="6" color="33554592" x="644" y="11" height="53" width="316"  name=order_date_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="5" color="33554592" x="8" y="4" height="71" width="240" format="[general]"  name=id  tag="受注IDを入力してください。" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes edit.imemode=0  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="5" color="33554592" x="280" y="4" height="71" width="336" format="[general]"  name=cust_id  tag="顧客IDを入力してください。顧客IDは sales_order テーブルと customer テーブルを関連付けます。" dddw.name=d_dddw_customers dddw.displaycolumn=id dddw.datacolumn=id dddw.percentwidth=300 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0 dddw.vscrollbar=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="5" color="33554592" x="644" y="4" height="71" width="316" format="yy/mm/dd"  name=order_date  tag="販売日を入力してください。" edit.name="MM/DD/YY" editmask.mask="YY/MM/DD" editmask.imemode=0 editmask.focusrectangle=no  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=footer alignment="1" text="0" border="5" color="33554592" x="580" y="7" height="53" width="136"  name=count_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+text(band=footer alignment="1" text="売上受注合計:" border="0" color="33554592" x="136" y="7" height="53" width="412"  name=t_1  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="78682240" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

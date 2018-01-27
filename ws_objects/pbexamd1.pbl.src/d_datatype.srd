@@ -1,0 +1,20 @@
+﻿$PBExportHeader$d_datatype.srd
+$PBExportComments$外部ソース データウィンドウです。「データウィンドウに適合する構造体を作成するユーティリティ」サンプル プログラムで使用します。
+release 11.5;
+datawindow(units=0 timer_interval=0 color=79416533 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no )
+header(height=74 color="536870912" )
+summary(height=1 color="536870912" )
+footer(height=1 color="536870912" )
+detail(height=65 color="536870912" )
+table(column=(type=char(50) updatewhereclause=yes name=colname dbname="colname" )
+ column=(type=char(30) updatewhereclause=yes name=coltype dbname="coltype" )
+ )
+text(band=header alignment="2" text="データ型"border="6" color="41943040" x="491" y="12" height="52" width="470"  name=coltype_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+text(band=header alignment="2" text="カラム名"border="6" color="41943040" x="8" y="12" height="52" width="470"  name=colname_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+column(band=detail id=2 alignment="0" tabsequence=20 border="5" color="41943040" x="488" y="3" height="52" width="470" format="[general]"  name=coltype edit.limit=0 edit.case=any edit.autoselect=no edit.autohscroll=yes edit.displayonly=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+column(band=detail id=1 alignment="0" tabsequence=10 border="5" color="41943040" x="8" y="3" height="52" width="470" format="[general]"  name=colname edit.limit=0 edit.case=any edit.autoselect=no edit.autohscroll=yes edit.displayonly=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="553648127" )
+ htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )

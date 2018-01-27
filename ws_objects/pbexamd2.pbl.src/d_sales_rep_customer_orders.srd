@@ -1,0 +1,26 @@
+﻿$PBExportHeader$d_sales_rep_customer_orders.srd
+$PBExportComments$選択された販売担当者の顧客からの受注情報をリストします。
+release 7;
+datawindow(units=0 timer_interval=0 color=75530304 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 107 print.margin.right = 107 print.margin.top = 97 print.margin.bottom = 97 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=180 color="536870912" )
+table(column=(type=long updatewhereclause=yes key=yes name=id dbname="sales_order.id" )
+ column=(type=datetime update=yes updatewhereclause=yes name=order_date dbname="sales_order.order_date" )
+ column=(type=char(2) update=yes updatewhereclause=yes name=fin_code_id dbname="sales_order.fin_code_id" )
+ column=(type=char(7) update=yes updatewhereclause=yes name=region dbname="sales_order.region" values="関東	関東/関西	関西/中部	中部/四国	四国/九州	九州/北海道	北海道/沖縄	沖縄/東北	東北/北陸	北陸/" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"sales_order~" ) COLUMN(NAME=~"sales_order.id~") COLUMN(NAME=~"sales_order.order_date~") COLUMN(NAME=~"sales_order.fin_code_id~") COLUMN(NAME=~"sales_order.region~")WHERE(    EXP1 =~"~~~"sales_order~~~".~~~"sales_rep~~~"~"   OP =~"=~"    EXP2 =~":sales_rep_id~"    LOGIC =~"and~" ) WHERE(    EXP1 =~"~~~"sales_order~~~".~~~"cust_id~~~"~"   OP =~"=~"    EXP2 =~":customer_id~" ) ) ORDER(NAME=~"sales_order.id~" ASC=yes ) ARG(NAME = ~"customer_id~" TYPE = number)  ARG(NAME = ~"sales_rep_id~" TYPE = number) " update="sales_order" updatewhere=1 updatekeyinplace=no arguments=(("customer_id", number),("sales_rep_id", number)) )
+text(band=detail alignment="1" text="受注日:" border="0" color="41943040" x="603" y="12" height="60" width="279"  name=order_date_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="1" tabsequence=32766 border="5" color="41943040" x="370" y="16" height="60" width="201" format="[general]"  name=id  tag="ユニークな受注ID" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="0" tabsequence=10 border="5" color="41943040" x="901" y="16" height="64" width="311" format="[general]"  name=order_date  tag="受注日" edit.name="MM/DD/YY" editmask.mask="YY/MM/DD" editmask.focusrectangle=no  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1090518960" )
+text(band=detail alignment="1" text="受注 ID:" border="0" color="41943040" x="9" y="12" height="52" width="343"  name=id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=3 alignment="0" tabsequence=20 border="5" color="41943040" x="370" y="104" height="64" width="192" format="[general]"  name=fin_code_id  tag="会計コード" dddw.name=d_dddw_fin_code dddw.displaycolumn=code dddw.datacolumn=code dddw.percentwidth=700 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1090518960" )
+text(band=detail alignment="1" text="地域:" border="0" color="41943040" x="603" y="108" height="52" width="279"  name=region_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+column(band=detail id=4 alignment="0" tabsequence=30 border="5" color="41943040" x="901" y="108" height="60" width="297" format="[general]"  name=region  tag="地域" edit.name="region" ddlb.limit=0 ddlb.sorted=yes ddlb.allowedit=no ddlb.case=any ddlb.autohscroll=yes ddlb.vscrollbar=yes ddlb.useasborder=yes  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="2" background.color="1090518960" )
+text(band=detail alignment="1" text="会計コード:" border="0" color="41943040" x="9" y="104" height="52" width="343"  name=fin_code_id_t  font.face="ＭＳ Ｐゴシック" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="128" background.mode="1" background.color="536870912" )
+htmltable(border="0" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

@@ -1,0 +1,18 @@
+﻿$PBExportHeader$p_emp_transaction_create.srp
+$PBExportComments$従業員トランザクション テーブルを更新します。
+PIPELINE(source_connect=PB Demo DB V2017R2,destination_connect=PB Demo DB V2017R2,type=replace,commit=100,errors=100,keyname="emp_pipe_transaction_x")
+SOURCE(name="employee",COLUMN(type=long,name="emp_id",dbtype="integer",key=yes,nulls_allowed=yes)
+ COLUMN(type=string,name="emp_fname",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="emp_lname",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=long,name="dept_id",dbtype="integer",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_health_ins",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_life_ins",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_day_care",dbtype="long varchar",nulls_allowed=yes))
+RETRIEVE(statement="SELECT employee.emp_id, employee.emp_fname, employee.emp_lname, employee.dept_id,employee.bene_health_ins, employee.bene_life_ins, employee.bene_day_care FROM employee Where 1 = 0 Union Select 102,	'芳樹',	'鈴木',100,	'Y','Y','Y' From employee Union Select 	105,	'晃',	'大野',	100,	'Y',	'N',	'N' From employee Union Select 	1157,	'勝子',	'吉田',	100,	'N',	'Y',	'N' From employee Union Select 	1250,	'和代','鈴木',	100,	'N',	'N',	'N' From employee Union Select 	129,'芳江','小林',	200,'Y','Y','Y' From employee Union Select 195,'弘','森崎', 200 ,'Y', 'Y', 'Y' From employee Union Select 1596,	'容子',	'松本',	200,	'Y',	'Y','N' From employee Union Select 	148,	'健一',	'望月',	300,	'Y',	'Y',	'Y' From employee Union Select 	390,	'邦夫',	'緒方',	300,	'N',	'N',	'Y' From employee Union Select 	586,	'聡',	'赤木',	300,	'Y',	'Y',	 'Y' From employee Union Select 	409,	'五朗',	'佐野',	400,	'Y',	'Y',	'Y' From employee Union Select 	591,	'信一郎',	'内田',	400,	'N',	'N','N' From employee Union Select 	888,	'則宏',	'小淵沢',	400,	'N',	'Y','Y' From employee Union Select 	992,	'里実',	'東井',	400,	'Y',	'Y',	'Y' From employee Union Select 	1062,	'和男',	'市岡',	400,	'N',	'Y',	'Y' From employee Union Select 1355,	'Joe',	'Overbey',	401,'Y','Y','N' From employee Union Select	1354,	'Joe',	'Morris',	500,	'Y',	'Y',	'Y' From employee")
+DESTINATION(name="emp_pipe_transaction",COLUMN(type=long,name="emp_id",dbtype="integer",key=yes,nulls_allowed=no,initial_value="0")
+ COLUMN(type=string,name="emp_fname",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="emp_lname",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=long,name="dept_id",dbtype="integer",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_health_ins",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_life_ins",dbtype="long varchar",nulls_allowed=yes)
+ COLUMN(type=string,name="bene_day_care",dbtype="long varchar",nulls_allowed=yes))

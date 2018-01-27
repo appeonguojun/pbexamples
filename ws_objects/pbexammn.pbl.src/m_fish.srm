@@ -1,0 +1,314 @@
+﻿$PBExportHeader$m_fish.srm
+$PBExportComments$fish サンプル プログラムのメニュー
+forward
+global type m_fish from menu
+end type
+type fish$ from menu within m_fish
+end type
+type m_start from menu within fish$
+end type
+type m_stop from menu within fish$
+end type
+type m_-1 from menu within fish$
+end type
+type m_configureaquarium from menu within fish$
+end type
+type m_- from menu within fish$
+end type
+type m_close from menu within fish$
+end type
+type fish$ from menu within m_fish
+m_start m_start
+m_stop m_stop
+m_-1 m_-1
+m_configureaquarium m_configureaquarium
+m_- m_-
+m_close m_close
+end type
+global type m_fish from menu
+fish$ fish$
+end type
+end forward
+
+shared variables
+
+end variables
+
+global type m_fish from menu
+fish$ fish$
+end type
+global m_fish m_fish
+
+type variables
+w_fish iw_parent_win
+end variables
+
+on m_fish.create
+m_fish=this
+call super::create
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.fish$=create fish$
+this.Item[UpperBound(this.Item)+1]=this.fish$
+end on
+
+on m_fish.destroy
+call super::destroy
+destroy(this.fish$)
+end on
+
+type fish$ from menu within m_fish
+m_start m_start
+m_stop m_stop
+m_-1 m_-1
+m_configureaquarium m_configureaquarium
+m_- m_-
+m_close m_close
+end type
+
+on selected;iw_parent_win = parentwindow
+end on
+
+on fish$.create
+call super::create
+this.text = "設定(&F)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_start=create m_start
+this.m_stop=create m_stop
+this.m_-1=create m_-1
+this.m_configureaquarium=create m_configureaquarium
+this.m_-=create m_-
+this.m_close=create m_close
+this.Item[UpperBound(this.Item)+1]=this.m_start
+this.Item[UpperBound(this.Item)+1]=this.m_stop
+this.Item[UpperBound(this.Item)+1]=this.m_-1
+this.Item[UpperBound(this.Item)+1]=this.m_configureaquarium
+this.Item[UpperBound(this.Item)+1]=this.m_-
+this.Item[UpperBound(this.Item)+1]=this.m_close
+end on
+
+on fish$.destroy
+call super::destroy
+destroy(this.m_start)
+destroy(this.m_stop)
+destroy(this.m_-1)
+destroy(this.m_configureaquarium)
+destroy(this.m_-)
+destroy(this.m_close)
+end on
+
+type m_start from menu within fish$
+end type
+
+event clicked;//Clicked script for m_start
+
+w_fish	w_Parent
+
+w_Parent = ParentWindow
+
+Timer(w_Parent.idb_Interval, w_Parent)
+
+end event
+
+on m_start.create
+call super::create
+this.text = "開始(&S)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_start.destroy
+call super::destroy
+end on
+
+type m_stop from menu within fish$
+end type
+
+event clicked;//Clicked script for m_stop
+
+Timer(0, ParentWindow)
+
+end event
+
+on m_stop.create
+call super::create
+this.text = "停止(&T)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_stop.destroy
+call super::destroy
+end on
+
+type m_-1 from menu within fish$
+end type
+
+on m_-1.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_-1.destroy
+call super::destroy
+end on
+
+type m_configureaquarium from menu within fish$
+end type
+
+event clicked;OpenWithParm(w_fish_config, ParentWindow)
+
+end event
+
+on m_configureaquarium.create
+call super::create
+this.text = "水槽の設定(&C)..."
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_configureaquarium.destroy
+call super::destroy
+end on
+
+type m_- from menu within fish$
+end type
+
+on m_-.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_close from menu within fish$
+end type
+
+on clicked;//Clicked script for m_close
+
+Close(ParentWindow)
+end on
+
+on m_close.create
+call super::create
+this.text = "閉じる(&X)"
+this.microhelp = "ウィンドウを閉じます。"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_close.destroy
+call super::destroy
+end on
+

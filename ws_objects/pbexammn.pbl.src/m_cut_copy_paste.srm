@@ -1,0 +1,411 @@
+﻿$PBExportHeader$m_cut_copy_paste.srm
+$PBExportComments$切り取り、コピー、貼り付けの例用のメニュー
+forward
+global type m_cut_copy_paste from menu
+end type
+type m_file from menu within m_cut_copy_paste
+end type
+type m_- from menu within m_file
+end type
+type m_exit from menu within m_file
+end type
+type m_file from menu within m_cut_copy_paste
+m_- m_-
+m_exit m_exit
+end type
+type m_edit from menu within m_cut_copy_paste
+end type
+type m_cut from menu within m_edit
+end type
+type m_copy from menu within m_edit
+end type
+type m_paste from menu within m_edit
+end type
+type m_edit from menu within m_cut_copy_paste
+m_cut m_cut
+m_copy m_copy
+m_paste m_paste
+end type
+type m_help from menu within m_cut_copy_paste
+end type
+type m_examplehelp from menu within m_help
+end type
+type m_about from menu within m_help
+end type
+type m_help from menu within m_cut_copy_paste
+m_examplehelp m_examplehelp
+m_about m_about
+end type
+global type m_cut_copy_paste from menu
+m_file m_file
+m_edit m_edit
+m_help m_help
+end type
+end forward
+
+global type m_cut_copy_paste from menu
+m_file m_file
+m_edit m_edit
+m_help m_help
+end type
+global m_cut_copy_paste m_cut_copy_paste
+
+on m_cut_copy_paste.create
+m_cut_copy_paste=this
+call super::create
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_file=create m_file
+this.m_edit=create m_edit
+this.m_help=create m_help
+this.Item[UpperBound(this.Item)+1]=this.m_file
+this.Item[UpperBound(this.Item)+1]=this.m_edit
+this.Item[UpperBound(this.Item)+1]=this.m_help
+end on
+
+on m_cut_copy_paste.destroy
+call super::destroy
+destroy(this.m_file)
+destroy(this.m_edit)
+destroy(this.m_help)
+end on
+
+type m_file from menu within m_cut_copy_paste
+m_- m_-
+m_exit m_exit
+end type
+
+on m_file.create
+call super::create
+this.text = "ファイル(&F)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_-=create m_-
+this.m_exit=create m_exit
+this.Item[UpperBound(this.Item)+1]=this.m_-
+this.Item[UpperBound(this.Item)+1]=this.m_exit
+end on
+
+on m_file.destroy
+call super::destroy
+destroy(this.m_-)
+destroy(this.m_exit)
+end on
+
+type m_- from menu within m_file
+end type
+
+on m_-.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_exit from menu within m_file
+end type
+
+event clicked;Close(ParentWindow)
+
+end event
+
+on m_exit.create
+call super::create
+this.text = "終了(&X)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_exit.destroy
+call super::destroy
+end on
+
+type m_edit from menu within m_cut_copy_paste
+m_cut m_cut
+m_copy m_copy
+m_paste m_paste
+end type
+
+on m_edit.create
+call super::create
+this.text = "編集(&E)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_cut=create m_cut
+this.m_copy=create m_copy
+this.m_paste=create m_paste
+this.Item[UpperBound(this.Item)+1]=this.m_cut
+this.Item[UpperBound(this.Item)+1]=this.m_copy
+this.Item[UpperBound(this.Item)+1]=this.m_paste
+end on
+
+on m_edit.destroy
+call super::destroy
+destroy(this.m_cut)
+destroy(this.m_copy)
+destroy(this.m_paste)
+end on
+
+type m_cut from menu within m_edit
+end type
+
+event clicked;ParentWindow.Post Dynamic of_cut()
+
+end event
+
+on m_cut.create
+call super::create
+this.text = "切り取り(&U)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_cut.destroy
+call super::destroy
+end on
+
+type m_copy from menu within m_edit
+end type
+
+event clicked;ParentWindow.Post Dynamic of_copy()
+
+end event
+
+on m_copy.create
+call super::create
+this.text = "コピー(&C)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_copy.destroy
+call super::destroy
+end on
+
+type m_paste from menu within m_edit
+end type
+
+event clicked;ParentWindow.Post Dynamic of_paste()
+
+end event
+
+on m_paste.create
+call super::create
+this.text = "貼り付け(&P)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_paste.destroy
+call super::destroy
+end on
+
+type m_help from menu within m_cut_copy_paste
+m_examplehelp m_examplehelp
+m_about m_about
+end type
+
+on m_help.create
+call super::create
+this.text = "ヘルプ(&H)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_examplehelp=create m_examplehelp
+this.m_about=create m_about
+this.Item[UpperBound(this.Item)+1]=this.m_examplehelp
+this.Item[UpperBound(this.Item)+1]=this.m_about
+end on
+
+on m_help.destroy
+call super::destroy
+destroy(this.m_examplehelp)
+destroy(this.m_about)
+end on
+
+type m_examplehelp from menu within m_help
+end type
+
+on m_examplehelp.create
+call super::create
+this.text = "サンプル ヘルプ(&L)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+event clicked;f_open_help ("w_cut_copy_paste")
+end event
+
+on m_examplehelp.destroy
+call super::destroy
+end on
+
+type m_about from menu within m_help
+end type
+
+on m_about.create
+call super::create
+this.text = "バージョン情報(&A)"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 9
+this.weight = 400
+this.facename = "MS UI Gothic"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_about.destroy
+call super::destroy
+end on
+
+event clicked;OpenWithParm(w_about_with_parm, "メタクラス関数の機能@" + &
+					"このサンプル プログラムでは、コントロールに対して関数を呼び出す前に、" + &
+					"その関数を使用することができるかどうかを判断するメタクラス関数の使用方法を示しています。" + &
+					"　ウィンドウ上に配置されたコントロールのいくつかに対し、切り取り、コピー、貼り付けの関数を実行することができます。" + &
+					"　これらの機能の一つをメニューから選択すると、現行のコントロールのクラス定義に基づいて、" + &
+					"その関数を呼び出すことが可能かどうかが判断されます。")
+
+end event
+

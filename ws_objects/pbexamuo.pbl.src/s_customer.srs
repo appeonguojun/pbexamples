@@ -1,0 +1,14 @@
+﻿$PBExportHeader$s_customer.srs
+$PBExportComments$分散 PB サンプル プログラムの構造体で、顧客データを保持するのに使用します。
+global type s_customer from structure
+	long		id
+	string		fname
+	string		lname
+	string		address
+	string		city
+	string		state
+	string		zip
+	string		phone
+	string		company_name
+end type
+
